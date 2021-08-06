@@ -14,6 +14,10 @@ app.use(express.json())
  * 
  */
 
+app.get('/', (request,response) =>{
+    return response.status(200).json({message: "Bem vindo!"})
+})
+
 app.get("/courses", (req, res) =>{
 
     const query = req.query;
